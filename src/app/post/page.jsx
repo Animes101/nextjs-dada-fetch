@@ -1,4 +1,5 @@
 import { Jacques_Francois_Shadow } from 'next/font/google';
+import Link from 'next/link';
 import React from 'react'
 
 const fetchpost=async()=>{
@@ -28,6 +29,8 @@ const Postpage =async () => {
                     <div key={index} className='p-4 bg-gray-400'>
                         <h1>{item.title}</h1>
                         <p>{item.body}</p>
+
+                        <Link className='bg-white text-black p-4' href={`/post/${item.id}`}>View Deails</Link>
 
                     </div>
                 )
